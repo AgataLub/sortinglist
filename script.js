@@ -355,11 +355,7 @@ function clickHouseFilter() {
 }
 
 function isGryffindor(student) {
-  if (student.house === "Gryffindor") {
-    return true;
-  } else {
-    return false;
-  }
+  return student.house === "Gryffindor";
 }
 
 function isRavenclaw(student) {
@@ -477,6 +473,11 @@ function showModal(clone, student, img) {
       document.querySelector(".modal-inq").textContent = "";
     }
 
+    //event listeners
+    document.querySelector("#add-prefect").addEventListener("click", checkPrefect);
+    document.querySelector("#add-inq").addEventListener("click", toggleInq);
+    document.querySelector("#expel").addEventListener("click", toggleExpelled);
+
     //fill the buttons correctly
     if (student.prefect === false) {
       document.querySelector("#add-prefect").textContent = "Make Prefect";
@@ -495,11 +496,6 @@ function showModal(clone, student, img) {
     } else {
       document.querySelector("#expel").textContent = "Expel";
     }
-
-    //event listeners
-    document.querySelector("#add-prefect").addEventListener("click", checkPrefect);
-    document.querySelector("#add-inq").addEventListener("click", toggleInq);
-    document.querySelector("#expel").addEventListener("click", toggleExpelled);
 
     function checkPrefect() {
       console.log("check the number of prefects in the house");
@@ -552,6 +548,9 @@ function showModal(clone, student, img) {
 
     function toggleExpelled() {
       console.log("expel student");
+      if (student.expelled === "Agata") {
+        alert("You can't expel Agata!");
+      }
       if (student.expelled === false) {
         student.expelled = true;
         document.querySelector("#expel").textContent = "This student is expelled";
@@ -694,8 +693,10 @@ function injectStudent() {
     house: "Hufflepuff",
     prefect: false,
     inquisition: false,
-    expelled: false,
+    expelled: "Agata",
     blood: 1,
+    gradenumber: 5,
+    grade: "Outstanding (O)",
   };
 
   allStudents.push(injectMe);
