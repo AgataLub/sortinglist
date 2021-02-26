@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hacked Hogwarts</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div><label><input type="text" id="input-search" placeholder="Search..." /></label>
+      <button id="search">Search</button></div>
+      <div id="nav-numbers">Number of students in...
+        <span id="gryf-number">Gryffindor: 0</span>
+        <span id="slyth-number">Slytherin: 0</span>
+        <span id="huff-number">Hufflepuff: 0</span>
+        <span id="rav-number">Ravenclaw: 0</span>
+        <span id="total-number">Total: 0</span>
+        <span id="exp-number">Expelled: 0</span>
+      </div>
+    </nav>
+
+    <div class="main">
+      <h1>Hacked Hogwarts</h1>
+      <p>&#x2640 - girl | &#x2642 - male | &#x1FA78 - Pure-Blood | &#x1F922 - Mud-Blood | &#x2B50 - Prefect | &#x1F40D - Slytherin | &#x1F981 - Gryffindor | &#x1F985 - Ravenclaw | &#x1F9A1	- Hufflepuff</p>
+      <div class="sorting">
+        <button id="show-pure">Pure-Bloods</button>
+        <!-- <button id="show-clubs">Active Students</button> -->
+        <button id="show-inq">Inquisitorial Staff</button>
+        <button id="show-prefects">Prefects</button>
+        <button id="show-exp">Expelled Students</button>
+        <button id="show-all">All</button>
+        <select id="dropdown-house">
+          <option value="4">All Houses</option>
+          <option value="0">Gryffindor</option>
+          <option value="1">Slytherin</option>
+          <option value="2">Hufflepuff</option>
+          <option value="3">Ravenclaw</option>
+        </select>
+        <button class="dropdown-submit">Submit</button><br>
+        <select id="dropdown-sorting">
+          <option value="3">Sort by...</option>
+          <option value="0">Name (a-z)</option>
+          <option value="1">Surname (a-z)</option>
+          <option value="2">Grades (high - low)</option>
+          <option value="4">House</option>
+        </select>
+        <button class="sorting-submit">Submit</button>
+        <span id="current-number"></span>
+      </div>
+
+
+
+      <div class="students">
+      </div>
+      <template id="template">
+          <div id="student-tile">
+          <img src="images/abbott_h.png" />
+          <div class="icon-box">
+            <p><span id="tile-name">Name</span> <span id="tile-surname">Surname</span></p>
+            <p>
+              <span class="icon" id="gender">&#129409;</span>
+              <span class="icon" id="house">&#129409;</span>
+              <span class="icon" id="prefect">&#129409;</span>
+              <span class="icon" id="pureblood">&#129409;</span>
+            </p>
+          </div>
+          </div>
+        </template>
+
+      <div class="modal displaynone">
+        <div class="modal-box displaynone">
+          <div class="close-box">X</div>
+          <img class="crest" src="images/slytherin_crest.png">
+          <div class="modal-flex">
+            <img class="modal-img" src="images/abbott_h.png" />
+            <ul>
+              <li><span class="modal-name">Name</span> <span class="modal-nick">Nickname</span> <span class="modal-surname">Surname</span></li>
+              <li class="modal-house">House</li>
+              <li class="modal-gender">Gender</li>
+              <li class="modal-blood">Blood Status</li>
+              <li class="modal-role">Add Role (Prefect/Club/Squad)</li>
+              <li class="modal-inq">Inq</li>
+              <li class="modal-education">Grades/Expelled</li>
+            </ul>
+          </div>
+          <button class="green" id="add-prefect">Make Prefect</button>
+          <button class="green" id="add-inq">Add to Inquisitorial Squad</button>
+          <button class="orange" id="expel">Expel</button>
+        </div>
+      </div>
+
+      <div class="prefect-alert displaynone">
+        <div class="close-box">X</div>
+        <p>There is already two Prefects in this house. Their names are <span class="alert-prefect1">Prefect One</span> and <span class="alert-prefect2">Prefect Two</span>.</p>
+        <button class="green" id="remove-prefect">Remove current prefect</button><button class="orange" id="resign">Resign</button>
+      </div>
+
+      <div class="alert displaynone">
+        <p>Are you sure?</p>
+
+        <div class="close-box">X</div>
+        <button class="green" id="yes">Yes</button><button class="orange" id="no">No</button>
+      </div>
+
+      <div class="hacked displaynone">
+<p>You've been hacked!</p>
+      </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

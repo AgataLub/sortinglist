@@ -1,0 +1,340 @@
+/* 
+eggshell F4F1DE
+terra cotta e07a5f 
+deep blue 3d405b
+green sheen 81b29a 
+deep champagne f2cc8f */
+
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap");
+
+body {
+  background-color: #f4f1de;
+  font-family: "Shippori Mincho", serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 2em;
+  color: #2f4858;
+}
+
+input {
+  font-family: Roboto, sans-serif;
+  font-size: 1em;
+  padding: 0.4em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  border: 1px solid #2f4858;
+  border-radius: 10px;
+}
+
+#search {
+  font-family: Roboto, sans-serif;
+  font-size: 1em;
+  padding: 0.4em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  border-radius: 10px;
+  background-color: #2f4858;
+  color: #f4f1de;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#search:hover {
+  background-color: #f4f1de;
+  color: #2f4858;
+  border: 1px solid #2f4858;
+}
+
+#search:active {
+  background-color: #e07a5f;
+}
+
+.main {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  background-color: #2f4858;
+  padding: 2em;
+  text-align: center;
+  color: #f4f1de;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.sorting {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#current-number,
+button {
+  font-family: Roboto, sans-serif;
+  font-size: 1em;
+  padding: 0.4em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  border: 1px solid #f4f1de;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #f4f1de;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+button:hover {
+  background-color: #f4f1de;
+  color: #2f4858;
+}
+
+button:active {
+  background-color: #e07a5f;
+  color: #2f4858;
+}
+
+select {
+  font-family: Roboto, sans-serif;
+  font-size: 1em;
+  padding: 0.4em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  border: 1px solid #f4f1de;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #f4f1de;
+}
+
+.students {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 2em;
+  column-gap: 2.5%;
+  justify-content: center;
+}
+
+#student-tile {
+  border: 1px solid #f4f1de;
+  border-radius: 10px;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  column-gap: 2em;
+}
+
+#student-tile:hover {
+  background-color: #f4f1de;
+  color: #2f4858;
+}
+
+img {
+  width: 108px;
+  height: 114px;
+  padding-top: 1em;
+}
+
+.icon-box {
+  text-align: left;
+  font-size: 1.3em;
+}
+
+.modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 3;
+  color: #2f4858;
+  display: none;
+}
+
+.modal-box,
+.prefect-alert,
+.alert {
+  color: #2f4858;
+  position: fixed;
+  border-radius: 10px;
+  background-color: #f4f1de;
+  z-index: 4;
+  left: 37%;
+  top: 20%;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.modal-flex {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.green {
+  border-color: #81b29a;
+  color: #81b29a;
+  width: 80%;
+  align-self: center;
+}
+
+.green:hover {
+  background-color: #81b29a;
+  color: #f4f1de;
+}
+
+.orange {
+  border-color: #e07a5f;
+  color: #e07a5f;
+  width: 80%;
+  align-self: center;
+}
+
+.orange:hover {
+  background-color: #e07a5f;
+  color: #f4f1de;
+}
+
+.green:active,
+.orange:active {
+  background-color: #e07a5f;
+  color: #f4f1de;
+}
+
+.close-box {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.close-box:hover {
+  color: #e07a5f;
+}
+
+.alert {
+  z-index: 8;
+  left: 47%;
+  top: 40%;
+}
+
+.prefect-alert {
+  z-index: 6;
+  left: 32%;
+  top: 35%;
+}
+
+.displaynone {
+  display: none;
+}
+
+/* colors */
+
+.hufflepuff {
+  background-color: #eeb527;
+  color: #38302c;
+}
+
+.hufflepuff > button {
+  border-color: #38302c;
+  color: #38302c;
+}
+
+.ravenclaw {
+  background-color: #222f5b;
+  color: #946b2d;
+}
+
+.ravenclaw > button {
+  border-color: #946b2d;
+  color: #946b2d;
+}
+
+.slytherin {
+  //https://coolors.co/c9f2c7-aceca1-96be8c-629460-243119;
+  color: #c6cdd2;
+  background-color: #243119;
+}
+
+.slytherin > button {
+  border-color: #c6cdd2;
+  color: #c6cdd2;
+}
+
+.gryffindor {
+  background-color: #650d1b;
+  color: #d8973c;
+}
+
+.gryffindor > button {
+  border-color: #d8973c;
+  color: #d8973c;
+}
+
+/* cool text effects */
+#current-number {
+  font-weight: 700;
+}
+
+/* animations and filters */
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.hacked {
+  animation-name: hacked;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  font-size: 1.8em;
+  font-weight: 800;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  position: fixed;
+  border-radius: 10px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+@keyframes hacked {
+  1% {
+    top: 0%;
+    left: 10%;
+    color: hotpink;
+    background-color: khaki;
+  }
+  25% {
+    top: 30%;
+    left: 60%;
+    color: hotpink;
+  }
+
+  50% {
+    top: 50%;
+    left: 30%;
+    color: blue;
+  }
+  75% {
+    top: 90%;
+    left: 55%;
+    color: lavender;
+    background-color: khaki;
+  }
+
+  100% {
+    top: 30%;
+    left: 10%;
+    color: purple;
+  }
+}
